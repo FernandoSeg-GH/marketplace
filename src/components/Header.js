@@ -33,19 +33,34 @@ function Header() {
                 <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
                     <div className="cursor-pointer hover:underline link">
                         <p>Hola Fernando Segre</p>
-                        <p className="font-extrabold">Cuenta & Listas</p>
+                        <p className="font-extrabold md:text-sm">Cuenta & Listas</p>
                     </div>
                     <div className="cursor-pointer hover:underline link">
                         <p>Devoluciones</p>
-                        <p className="font-extrabold">& Ordenes</p>
+                        <p className="font-extrabold md:text-sm">& Ordenes</p>
                     </div>
-                    <div className="cursor-pointer hover:underline link">
+                    <div className="relative cursor-pointer hover:underline link flex items-center ">
+                        <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 rounded-full text-center text-black font-bold">0</span>
                         <ShoppingCartIcon className="h-10"/>
-                        <p className="font-extrabold">Carrito</p>
+                        <p className="hidden md:inline font-extrabold md:text-sm mt-2">Carrito</p>
                     </div>
                 </div>
             </div>
             {/* Bottom Nav*/}
+            <div className="flex items-center space-x-3 p-2 pl-6 bg-corderitos_blue-light text-white text-sm">
+                <p className="cursor-pointer hover:underline flex items-center">
+                    <MenuIcon className="h-6 mr-1"/>
+                    All</p>
+                <p className="cursor-pointer hover:underline">Prime Video</p>
+                <p className="cursor-pointer hover:underline">Business</p>
+                <p className="cursor-pointer hover:underline">Today's Deals</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Electronics</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Food & Grocery</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Prime</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Buy Again</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Shopper Toolkit</p>
+                <p className="cursor-pointer hover:underline hidden lg:inline-flex">Health & Personal Care</p>
+            </div>
             <div>
 
             </div>
