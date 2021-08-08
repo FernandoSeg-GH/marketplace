@@ -15,7 +15,7 @@ function Checkout() {
         <div className="bg-gray-100">
             <Header/>
 
-            <main className="lg: flex max-w-screen-2xl mx-auto">
+            <main className="md: flex max-w-screen-2xl mx-auto">
                 {/* Left */}
                 <div className="flex-grow m-5 shadow-xl">
                     <Image 
@@ -29,27 +29,30 @@ function Checkout() {
                             {items.lenght === 0 ? "Your basket is empty" : "Your Shopping Basket"}
                         </h1>
 
-                        {items.map((item, i) => (
-                            <CheckoutProduct  
-                                key={i}
-                                id={item.id}
-                                title={item.title}
-                                rating={item.rating}
-                                description={item.description}
-                                price={item.price}
-                                category={item.category}
-                                image={item.image}
-                                hasPrime={item.hasPrime}
-                            />
-                        ))}
+                        <div>
+                            {items.map((item, i) => (
+                                <CheckoutProduct  
+                                    key={i}
+                                    id={item.id}
+                                    title={item.title}
+                                    rating={item.rating}
+                                    description={item.description}
+                                    price={item.price}
+                                    category={item.category}
+                                    image={item.image}
+                                    hasPrime={item.hasPrime}
+                                />
+                            ))}
+                        </div>
+
                     </div>
                 </div>
                 {/* Right */}
-                <div className="fleex flex-col bg-white p-10 shadow-md">
+                <div className="flex flex-col mw-5 bg-white p-7 shadow-md">
                     {items.length > 0 && (
                         <>
                             <h2 className="whitepace-nowrap">Subtotal ({items.length}, items):
-                                <span className="font-bold">ARS$ {total}</span>
+                                <p className="font-bold">USD$ {total}</p>
                             </h2>
 
                             <button className={`mt-auto p-2 text-sm md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border boder-yellow-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 active:from-yellow-500 mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allow'}`}>
