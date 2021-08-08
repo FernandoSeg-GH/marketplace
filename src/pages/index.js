@@ -7,7 +7,7 @@ export default function Home({products}) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Corderitos Original</title>
+        <title>Marketplace Demo</title>
       </Head>
 
       <Header/>
